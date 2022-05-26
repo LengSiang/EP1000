@@ -33,7 +33,7 @@ h1, h2, h3 {
 
 .nav {
     background-color: #c4d2f3 ;
-    width: 160px;
+    width: 140px;
     float: left;
     padding: 1em;
 }
@@ -47,27 +47,15 @@ h1, h2, h3 {
 }
 
 .main {
+    
     background: linear-gradient(to bottom, #9999ff 0%, #bbabbd 100%);
     width: 840px;
     float: right;
     padding: 1em;
 }
 
-#blogheader {
-    background-color: #4E327D;
+#gallery {
     text-align: center;
-    padding-top: 10px;
-}
-
-.morecontent {
-    padding: 0px 0px 0px 0px;
-}
-
-.blog {
-    background: linear-gradient(to bottom, #9999ff 0%, #bbabbd 100%);
-    width: 968px;
-    float: right;
-    padding: 1em;
 }
 
 .pics {
