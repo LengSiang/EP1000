@@ -2,6 +2,7 @@ body {
     background-color: #625F70 ;
     font-family: Papyrus, Helvetica, Arial, sans-serif;
     font-size: 18px;
+    margin: 0;
 }
 
 a {
@@ -24,10 +25,16 @@ h1, h2, h3 {
     background-color: #4E327D;
     color: white;
     text-align: center;
+    margin: 0;
     padding-top: 10px;
+    overflow: hidden;
+    position: fixed;/* Make it stick, even on scroll */
+    top: 0;
+    width: 1000px;
 }
 
 .content {
+    margin-top: 60px;
     display: flex; /* equal height of the children */
     padding: 0px 0px 0px 0px;
 }
@@ -37,15 +44,33 @@ h1, h2, h3 {
     width: 140px;
     float: left;
     padding: 1em;
+    
 }
 
 .nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0px;
+    position: fixed;/* Make it stick, even on scroll */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 .nav .selected {
     font-weight: bold;
+    display: block;
+    width: 140px;
 }
+
+.nav .selected.active {
+    background-color: #9999ff;
+    color: rgb(3, 3, 150);
+  }
+
+/* Change the link color on hover */
+.nav .selected:hover:not(.active) {
+    background-color: rgb(153, 153, 153);
+    color: rgb(3, 3, 150);
+  }
 
 .main {
     
