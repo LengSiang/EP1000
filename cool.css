@@ -16,7 +16,7 @@ h1, h2, h3 {
 
 #container {
     
-    width: 1000px;
+    width: 1024px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -25,21 +25,23 @@ h1, h2, h3 {
     background-color: #4E327D;
     color: white;
     text-align: center;
-    margin: 0;
     padding-top: 10px;
-    overflow: hidden;
     position: fixed;/* Make it stick, even on scroll */
     top: 0;
-    width: 1000px;
+    width: 1024px;
 }
 
-.content {
-    margin-top: 60px;
+#content {
+    margin-top: 66px;
     display: flex; /* equal height of the children */
     padding: 0px 0px 0px 0px;
 }
 
-.nav {
+.tocnumber{
+    color: black;
+}
+
+#nav {
     background-color: #c4d2f3 ;
     width: 140px;
     float: left;
@@ -47,7 +49,7 @@ h1, h2, h3 {
     
 }
 
-.nav ul {
+#nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0px;
@@ -55,25 +57,24 @@ h1, h2, h3 {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
-.nav .selected {
+#nav a {
     font-weight: bold;
     display: block;
     width: 140px;
 }
 
-.nav .selected.active {
+#nav a.active {
     background-color: #9999ff;
     color: rgb(3, 3, 150);
   }
 
 /* Change the link color on hover */
-.nav .selected:hover:not(.active) {
+#nav a:hover:not(.active) {
     background-color: rgb(153, 153, 153);
     color: rgb(3, 3, 150);
   }
 
-.main {
-    
+#main {
     background: linear-gradient(to bottom, #9999ff 0%, #bbabbd 100%);
     width: 840px;
     float: right;
@@ -84,8 +85,17 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.pics {
+#pics {
     text-align: center;
+}
+
+#hobbies {
+    padding-left: 1em;
+}
+
+#prodlist {
+    padding-left: 1em;
+    list-style-type: none;
 }
 
 #footer {
@@ -94,4 +104,5 @@ h1, h2, h3 {
     background-color: #4E327D;
     color: white;
     text-align: right;
+    
 }
