@@ -15,7 +15,6 @@ h1, h2, h3 {
 }
 
 #container {
-    
     width: 1024px;
     margin-left: auto;
     margin-right: auto;
@@ -25,62 +24,71 @@ h1, h2, h3 {
     background-color: #4E327D;
     color: white;
     text-align: center;
-    padding-top: 6px;
+    padding-top: 4px;
     position: fixed;/* Make it stick, even on scroll */
-    top: 0;
     width: 1024px;
+    height:56px;
 }
 
 #content {
-    margin-top: 62px;
     display: flex; /* equal height of the children */
-    padding: 0px 0px 0px 0px;
+    padding: 60px 0px 0px 0px;
+    margin:0%;
 }
 
 .tocnumber{
     color: black;
 }
 
-#nav {
-    background-color: #c4d2f3 ;
-    width: 144px;
+.nav {
+    width: 160px;
     float: left;
-    padding: 1em;
-    
+    background-color: #c4d2f3 ;
 }
 
-#nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0px;
+.nav ul {
+    padding:0;
+    margin:0;
     position: fixed;/* Make it stick, even on scroll */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
-#nav a {
+
+.nav a {
+    text-decoration: none;
     font-weight: bold;
     display: block;
-    width: 144px;
+    padding: 8px 31px;
+    text-align: center;
 }
 
-#nav a.active {
+.nav li{
+    text-align: center;
+}
+
+.nav a.active {
     background-color: #9999ff;
     color: rgb(3, 3, 150);
     
   }
 
 /* Change the link color on hover */
-#nav a:hover:not(.active) {
+.nav a:hover:not(.active) {
     background-color: rgb(153, 153, 153);
     color: rgb(3, 3, 150);
     
   }
 
-#main {
+.main {
     background: linear-gradient(to bottom, #9999ff 0%, #bbabbd 100%);
     width: 880px;
     float: right;
-    padding: 1em;
+    margin-left: 0%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    
 }
 
 #gallery {
