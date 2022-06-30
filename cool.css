@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-a {
+.nav .main a {
     text-decoration: none;
     color: rgb(3, 3, 150);
 }
@@ -43,18 +43,19 @@ h1, h2, h3 {
 }
 
 
-
-ul.nav  {
+.nav  {
+    float: left;
     list-style-type: none;
     padding:0;
     margin:0;
     width:12%;
+    Height: auto;
     background-color: #2c3853 ;
-    position: fixed;/* Make it stick, even on scroll */
-    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    position: fixed;
+    overflow: hidden; 
 }
 
-ul.nav li a {
+.nav a {
     text-decoration: none;
     font-weight: bold;
     display: block;
@@ -64,39 +65,39 @@ ul.nav li a {
 }
 
 
-
-ul.nav li a.active {
+.nav a.active {
     background-color: hsl(36, 86%, 54%);
     color:rgb(255, 255, 255);
     
   }
 
-/* Change the link color on hover */
-ul.nav li a:hover:not(.active) {
+.nav a:hover:not(.active) {
     background-color: rgb(124, 172, 198);
     color:  #4E327D;
   }
 
 div.main {
+
     background: linear-gradient(to bottom, #9778c5 0%, #b7959f 100%);
     margin-left: 0%;
     padding:24px 40px 24px 184px;
     
-
 }
 
   @media screen and (max-width: 1000px) {
     
-    ul.nav {
+    .nav {
       width: 100%;
       height: auto;
       position: fixed;
       
     }
     
-    ul.nav li a {
+    .nav a {
+      display: block;
       float: left;
       padding:15px;
+     
     }
 
     div.main {
@@ -106,19 +107,46 @@ div.main {
     div.content {margin-left: 0;}
   }
 
-  @media screen and (max-width: 500px) {
-    ul.nav li a {
+ /* @media screen and (max-width: 540px) {
+    .nav li a {
       text-align: center;
       float: none;
     }
+    
      
     div.main {
         
         margin: 0;
         padding:310px 36px;
     }
-  }
+  }*/
 
+.nav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 540px) {
+    .nav a:not(:first-child) {display: none;}
+    .nav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 540px) {
+    .nav.responsive {position: relative;}
+    .nav.responsive a .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+  }
 
 #gallery {
     text-align: center;
@@ -145,3 +173,4 @@ div.main {
     text-align: right;
     
 }
+  
