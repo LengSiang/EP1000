@@ -7,6 +7,23 @@
     <title>V An's Main Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="cool.css"/>
+    <style>
+      table {
+        font-family: Quicksand;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #333c5c;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      </style>
 </head>
 <body>
     <div id="container">
@@ -16,10 +33,10 @@
         <div  id="content">
             <div class="nav"id="topnav">
                 
-                    <a  href="index.html">Homepage</a>
+                    <a href="index.html">Homepage</a>
+                    <a href="about.html">About</a>
                     <a class="active" href="project.html">Projects</a>
-                    <a  href="about.html">About</a>
-                   <a  href="modupdates.html">What I Do</a>
+                   <a  href="modupdates.html">EP1000 Module Blog</a>
                    <a  href="mailto:remixerlva@gmail.com">E-mail</a>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars"></i>
@@ -37,24 +54,342 @@
                           }
                         }
                         </script>
-            <div class="main">
-                <h1>My Projects</h1>
-                <div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><p id="mw-toc-heading">These are my projects:</p><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
-                <div id="prodlist">
-                    <li class="toclevel-1 tocsection-1"><a href="#DiscoBall"><span class="tocnumber">1&nbsp</span> <span class="toctext">Disco Ball (in progress)</span></a></li>
-                    <li class="toclevel-1 tocsection-2"><a href="#SynthPad"><span class="tocnumber">2&nbsp</span> <span class="toctext">SynthPad (in progress)</span></a></li>
-            </div> 
-                </div>
-                <br>
-                <h2>Additional Info</h2>
-                <p>FabLab Safety Assessment 2022 score: 85%</p>
-                <a href="images/safety.jpg"><img src="images/safety.jpg"height="90px"/></a>
-                <p>3D Printer Certification Quiz score: 90%</p>
-                <a href="images/3dprint.JPG"><img src="images/3dprint.JPG"height="270px"/></a>
-                <p>Laser Cutter Certification Quiz score: 90%</p>
-                <a href="images/lasercut.jpg"><img src="images/lasercut.jpg"height="270px"/></a>
+                        
+                <div class="main">
+                  <h1>Projects</h1><br>
+                
+
+                <h2>Musical Reactive Light Box</h2>
+                <p>A multicolour lighting display using neopixels that react to music with random colours in 4 switchable modes.<br><br></p>
+                  This video shows all of its features and how it works.<br><br>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/MJZILZkIyPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br><br>
+                
+                <h2>Features</h2>
+                <p>1. It has 4 modes of lighting display, all utilising a pair of sound sensors to detect variation in music amplitude. The modes are selected by pressing a push button that cycles through the different modes until it goes back to the first one. The 4 modes are: <br> </p>
+                <table style="width: 100%">
+                  <tr>
+                <td> Mode 1 [default]: </td>
+              
+                <td>sound sensitivity [light blinks/changes color when mid-volume sound is detected</td>
+              </tr><tr>
+                <td>Mode 2:</td> 
+              
+                <td>Low sound sensitivity (light only blinks/changes color when a relatively louder sound is detected, i.e. the significant parts of a song</td>
+              </tr><tr>
+                <td>Mode 3:</td> 
+              
+                <td>Dimming light mode (light dies down when sound is detected and lits back up in a sine wave-like fashion altogether when sound trails off)</td>
+              </tr><tr>
+                <td>Mode 4:</td> 
+              
+                <td>lightning flash mode (light stays off but flashes on when loud sound is detected)</td>
+                  </tr>
+                </table><br>
+                <p>2. The brightness of the neopixels can be adjusted by turning the knob of a potentiometer </p><br><br>
+                <h2>Fabrication Methods Used</h2><br>
+                
+                <table>
+                  <tr>
+                    <th>Technique</th>
+                    <th>Makes</th>
+                  </tr>
+                  <tr>
+                    <td>CAD design</td>
+                    <td>Box, component holders, graphic for light display</td>
+                  </tr>
+                  <tr>
+                    <td>Laser cutting</td>
+                    <td>Box, light display sheet</td>
+                  </tr>
+                  <tr>
+                    <td>3D printing</td>
+                    <td>Component holders</td>
+                  </tr>
+                  <tr>
+                    <td>Processing system</td>
+                    <td>Arduino Nano V3 CH470</td>
+                  </tr>
+                  <tr>
+                    <td>Input devices</td>
+                    <td>Slide switch, push button, potentiometer, sound sensors</td>
+                  </tr>
+                  <tr>
+                    <td>Output devices</td>
+                    <td>Buzzer, neopixel strips</td>
+                  </tr>
+                  <tr>
+                    <td>Power</td>
+                    <td>Single 5V DC plug, 1.5V AA batteries</td>
+                  </tr>
+                </table><br><br><br>
+                <h2>Bill of Materials</h2><br>
+                <table>
+                  <tr>
+                    <th>Sn</th>
+                    <th>Qty</th>
+                    <th>Description</th>
+                    <th>Cost</th>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <th>1</th>
+                    <th>Arduino Nano</th>
+                    <th>$14.50</th>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <th>2</th>
+                    <th>CZN-15E sound sensor module</th>
+                    <th>$6.90</th>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <th>1</th>
+                    <th>WS2812B NeoPixel strip (50m)</th>
+                    <th>$59.90</th>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <th>1</th>
+                    <th>Piezoelectric speaker</th>
+                    <th>$2.00</th>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <th>1</th>
+                    <th>Push button</th>
+                    <th>$0.70</th>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <th>1</th>
+                    <th>Slide switch</th>
+                    <th>$0.80</th>
+                  </tr>
+                  <tr>
+                    <th>7</th>
+                    <th>1</th>
+                    <th>Potentiometer</th>
+                    <th>$1.00</th>
+                  </tr>
+                  <tr>
+                    <th>8</th>
+                    <th>1</th>
+                    <th>330 ohms resistor </th>
+                    <th>$0.05</th>
+                  </tr>
+                  <tr>
+                    <th>9</th>
+                    <th>1</th>
+                    <th>1 microFarad capacitor </th>
+                    <th>$0.60</th>
+                  </tr>
+                  <tr>
+                    <th>10</th>
+                    <th>1</th>
+                    <th>AA battery holder </th>
+                    <th>$3.00</th>
+                  </tr>
+                  <tr>
+                    <th>11</th>
+                    <th>1</th>
+                    <th>4 pcs AA battery pack</th>
+                    <th>$1.60</th>
+                  </tr>
+                  <tr>
+                    <th>12</th>
+                    <th>2</th>
+                    <th>Breadboard</th>
+                    <th>$5.00</th>
+                  </tr>
+                  <tr>
+                    <th>13</th>
+                    <th>1</th>
+                    <th>40 pin 40 way M/M connector rainbow jumper cable wires (10cm)</th>
+                    <th>$5.50</th>
+                  </tr>
+                  <tr>
+                    <th>14</th>
+                    <th>1</th>
+                    <th>40 pin 40 way M/F connector rainbow jumper cable wires (10cm)</th>
+                    <th>$5.50</th>
+                  </tr>
+                  <tr>
+                    <th>15</th>
+                    <th>1</th>
+                    <th>3mm thick 30 x 50 mm clear acrylic sheet</th>
+                    <th>$15.00</th>
+                  </tr>
+                  <tr>
+                    <th>16</th>
+                    <th>1</th>
+                    <th>3mm thick A3 plywood</th>
+                    <th>$10.00</th>
+                  </tr>
+                </table><br><br><br>
+                <h2>Ideas and References</h2>
+                <p>Having seen some arduino-based sound reactive led strips, I wanted to make one as my first Arduino project. 
+                  The following Youtube link is to the video that I referred to during the course of my project: <a class="selected" href="https://youtu.be/NeTVxjG42tk">https://youtu.be/NeTVxjG42tk</a>.
+                There are many videos out there related to lighting LED strips using sound sensor inputs, but this video is the one that I found most relevant to my idea and project scale. 
+                It is a rather simple project with minimal features but fulfilling in terms of my objective for this small project. 
+                Besides the fact that components supply is limited and challenging to get, time constraint was another reason why my project could not expand in terms of features and aesthetics. </p>
+                <p>For the design of my project, I took the concept idea from a former student's EP1000 project which was a mood lamp.<br>
+                  <div id="gallery"><a href="images/bird.jpg"><img src="images/bird.jpg"height="470px"/></a>&nbsp;&nbsp;<a href="images/bird2.jpg"><img src="images/bird2.jpg"height="470px"/></a><br></div>
+                  I think that shining light on an acrylic sheet engraved with a really cool design would make a good light show.</p><br>
+                <h2>Initial sketch</h2>
+                <p>This is a sketch of the prototype at the beginning of the project.</p>
+                <div id="gallery"><a href="images/sketch.jpg"><img src="images/sketch.jpg"height="470px"/></a><br></div><br><br><br>
+                <h2>CAD design</h2>
+                <p>Below is the Fusion360 model of the box that houses all components including the lighting display. It will be fabricated by laser cutting and 3d-printing combined.</p>
+                <div id="gallery"><iframe width="640" height="480" frameborder="0" allowFullScreen webkitallowfullscreen mozallowfullscreen src="https://gallery.autodesk.com/projects/171391/assets/659488/embed"></iframe></div><br><br>
+                <h3>Breakdown of the box model:</h3>
+                  <p>
+                  1. A rectangle of length = 320mm and width = 108mm is sketched and extruded to a height of 3mm (desired plywood thickness).<br><br>
+                  2. Tabs are created by first sketching 2 small rectangle on the surface of the plank's length. 
+                  The length of both rectangles are the same and dimensioned by using the formula: length tab = length / ( ( number of tabs along length * 2 ) + 1 ). <br><br>
+                  3. The 2nd rectangle is cut-extruded inwards and a tab is formed. The tab is duplicated along the plank's length by using the rectangular pattern command. 
+                  The formula for rectangular pattern distance is length - ( Length of tab * 3 ). <br><br>
+                  <div id="gallery"><a href="images/LB_Rec1.jpg"><img src="images/LB_Rec1.jpg"height="470px"/></a></div><br><br>
+                  4. Next, The back side of the box is created by first sketching a rectangle on that plane and extruding it inwards to a distance of 3mm. <br><br>
+                  <div id="gallery"><a href="images/LB_ext1.jpg"><img src="images/LB_ext1.jpg"height="470px"/></a></div><br><br>
+                  5. To split the two solids into individual body parts, the combine tool is used to split them by using cut mode. <br><br>
+                  <div id="gallery"><a href="images/LB_cmb1.jpg"><img src="images/LB_cmb1.jpg"height="470px"/></a></div><br><br>
+                  6. Tabs are created along the plank's width by repeating steps 2 & 3 but the formulae for the width tab and rectangular pattern distance are different. 
+                  Width tab = width / ( ( number of tabs along width * 2 ) + 1 ), rectangular pattern distance = width - ( Length of tab * 3 ) <br><br>
+                  <div id="gallery"><a href="images/LB_ext2.jpg"><img src="images/LB_ext2.jpg"height="470px"/></a></div><br><br>
+                  <div id="gallery"><a href="images/LB_rec2.jpg"><img src="images/LB_rec2.jpg"height="470px"/></a></div><br><br>
+                  7. For the tabs along the height of the box, tab = height / ( ( number of tabs along height * 2 ) + 1 ), rectangular pattern distance = height - ( Length of tab * 3 ).<br><br>
+                  <div id="gallery"><a href="images/LB_ext3.jpg"><img src="images/LB_ext3.jpg"height="470px"/></a></div><br><br>
+                  <div id="gallery"><a href="images/LB_rec3.jpg"><img src="images/LB_rec3.jpg"height="470px"/></a></div><br><br>
+                  8. Next, the 3 parts (length, width, height) are mirrored one by one to form a complete rectangular box. Mirror planes are created by constructing planes.<br><br>
+                  <div id="gallery"><a href="images/LB_mirror.jpg"><img src="images/LB_mirror.jpg"height="470px"/></a></div>  <br><br>
+                  9. A 270 x 3mm slot is created on the top of the box to accomodate the 3mm thick acrylic sheet for light display.<br><br>
+                  <div id="gallery"><a href="images/LB_slot.JPG"><img src="images/LB_slot.JPG"height="470px"/></a></div><br><br>
+                  10. There will be two identical low walls on the floor of the box for positioning the NeoPixel strip in place. A plane is first constructed right at the middle and a sketch is created.
+                   After extruding the low wall, it is mirrored 10 mm away from itself and now there is a suporting structure created for the NeoPixel strip.<br><br>
+                   <div id="gallery"><a href="images/LB_midplane.JPG"><img src="images/LB_midplane.JPG"height="470px"/></a></div><br><br>
+                   <div id="gallery"><a href="images/LB_lw.JPG"><img src="images/LB_lw.JPG"height="470px"/></a></div><br><br>
+                  11. A sketch is created on the side view of the box and extruded to create a holder for the light display. <br><br>
+                  <div id="gallery"><a href="images/LB_skt.JPG"><img src="images/LB_skt.JPG"height="470px"/></a></div><br><br>
+                  <div id="gallery"><a href="images/LB_holder1.JPG"><img src="images/LB_holder1.JPG"height="470px"/></a></div><br><br>
+                  12. The holder is further modified to make it fit to the NeoPixel holder on the floor of the box and to support the acrylic sheet for light display.<br><br>
+                  <div id="gallery"><a href="images/LB_3dP.JPG"><img src="images/LB_3dP.JPG"height="470px"/></a></div><br><br>
+                  <div id="gallery"><a href="images/LB_3dP2.JPG"><img src="images/LB_3dP2.JPG"height="470px"/></a></div><br><br>
+                  13. A hole is created on the left side of the box for accessing the USB mini-b input port of Arduino Nano. 2 holes are created on the front of the box to accomodate a push button and potentiometer. One hole is created on the back of the box for the slide switch. 2 identical circular holes are created on the left and right sides of top of the box for the microphones of 2 sound sensor modules.<br><br>
+                  <div id="gallery"><a href="images/LB_hole2.JPG"><img src="images/LB_hole2.JPG"height="470px"/></a></div><br><br>
+                  <div id="gallery"><a href="images/LB_hole.JPG"><img src="images/LB_hole.JPG"height="470px"/></a></div><br><br>
+                  <div id="gallery"><a href="images/LB_hole3.JPG"><img src="images/LB_hole3.JPG"height="470px"/></a></div><br><br>
+                  <div id="gallery"><a href="images/LB_mic.JPG"><img src="images/LB_mic.JPG"height="470px"/></a></div><br><br>
+                  14. The box is completed and ready to be exported to respective files for laser cutting and 3D-printing. <br><br>
+                  <div id="gallery"><a href="images/LB_complete.JPG"><img src="images/LB_complete.JPG"height="470px"/></a></div><br><br>
+                  Aside from the box, some holder parts for electronic components were modelled for 3D-printing.<br><br>
+                  <div id="gallery"><iframe width="640" height="480" frameborder="0" allowFullScreen webkitallowfullscreen mozallowfullscreen src="https://gallery.autodesk.com/projects/171449/assets/659699/embed"></iframe>
+                  </p></div><br><br>
+                <h3>Preparing the box drawings for laser cutting:</h3>
+                  <p>
+                  The Fusion360 model is converted into a dxf drawing file to be prepared for laser cutting. In Fusion360, every of the individual parts are projected as a sketch and saved as a DXF file. 
+                 The DXF files are imported into Inkscape and arranged.<br><br>
+                 <div id="gallery"><a href="images/dxf.JPG"><img src="images/dxf.JPG"height="470px"/></a></div><br><br>
+                  The lineweight of every line is made to be hairline and their colour is red. It is done in the Fill and Stroke tab. <br><br>
+                  <div id="gallery"><a href="images/dxf2.JPG"><img src="images/dxf2.JPG"height="470px"/></a></div><br><br> 
+                  I wanted to engrave the handwritten words 'Yaoliu' on the front of the box so I opened Photoshop on iPad and wrote the words using an Apple Pencil. 
+                  The writing is exported as a transparent png file and I imported it into Inkscape. It is scaled to a desired size and positioned on the lower right corner of the front wall to be laser cut. <br><br>
+                  <div id="gallery"><a href="images/yaoliu.png"><img src="images/yaoliu.png"height="140px"/></a></div><br><br>
+                    <div id="gallery"><a href="images/dxf3.JPG"><img src="images/dxf3.JPG"height="470px"/></a></div></p><br><br>
+                    <h3>Preparing the light display design for laser cutting:</h3><br>
+                  I wanted to create something resembling hard dance music so I took an image of a hard dance music festival mainstage backdrop from google: <br><br>
+                  <div id="gallery"><img src="https://www.backbone-international.com/wp-content/uploads/2019/07/Defqon1-Buildup17.jpg" alt="backbone-international.com" height="420px"></div><br><br>
+                  Using the Bezier tool, the profile outline of the the image was drawn to be vector cut later.<br><br>
+                  <div id="gallery"><a href="images/dxf4.JPG"><img src="images/dxf4.JPG"height="470px"/></a></div><br><br>
+                  The original image was then converted to grayscale using Photoshop and imported to Inkscape so that the details could be engraved. <br><br>
+                  <div id="gallery"><a href="images/dxf6.JPG"><img src="images/dxf6.JPG"height="470px"/></a></div><br><br>
+                  Using the 'Trace Bitmap' tab in Inkscape, the raster image was applied a 'brightness cutoff' detection mode to filter out minute details and simplify the entire image to contain lesser details. 
+                  This image optimisation will minimise laser cut time and reduce the risk of the acrylic catching fire while being cut. The image details are converted to vector automatically. 
+                  The fill is changed to RGB green colour for engraving.<br> <br>
+                  <div id="gallery"><a href="images/dxf5.JPG"><img src="images/dxf5.JPG"height="470px"/></a></div><br><br>
+                  The drawing is exported to an SVG file and is ready to be laser cut.<br><br><br></p>
+                  <h2>Fabrication</h2><br>
+                  <h3>3D-printing:</h3>
+                  <p>
+                  The light display holder and electronic component holders are exported as STL files and sliced with Ultimaker Cura. A larger layer height of 0.3mm was set to reduce print time. <br><br>
+                  <div id="gallery"><a href="images/cura1.JPG"><img src="images/cura1.JPG"height="470px"/></a></div><br><br>
+                    <div id="gallery"><a href="images/Cura2.JPG"><img src="images/Cura2.JPG"height="470px"/></a></div><br><br>
+                  The Prusa i3 Mk3 3D-printer in SP Makerspace was used to print the parts. Because the light display holder could take up to 5 hours to print and I started printing at 1pm, the print could not be completed by the time Makerspace had to close.
+                   I decided to stop the printing at 72% and call it done since the unfnished print could nonetheless serve its purpose of supporting the acrylic light display sheet. It was a Friday and I couldn't afford to wait till Monday to be back and take the finished print. <br><br>
+                   <a href="images/3dp1.jpg"><img src="images/3dp1.jpg"height="470px"/></a>&nbsp;&nbsp;<a href="images/3dp2.JPG"><img src="images/3dp2.JPG"height="470px"/></a><br><br>
+                  </p>
+                   <h3>Laser-cutting:</h3>
+                   <p>
+                   The light display design SVG file is imported to CorelDraw to be laser-cut using the Universal laser-cutter in SP Makerspace. 
+                   When the SVG file exported from Inkscape was imported to CorelDraw, it was messed up because the strokes went all over the place and I tried my best to put things back into place. Some of the engraved details could not be fixed and they look off.
+                    But I started the laser-cutting anyway because I did not know how to fix the drawing, nor do I know how to prevent Inkscape SVG from messing up when imported to CorelDraw. Nonetheless, the final result looks okay.<br><br>
+                  <a href="images/ls1.jpg"><img src="images/ls1.jpg"height="470px"/></a><br><br><a href="images/ls2.jpg"><img src="images/ls2.jpg"height="470px"/></a><br><br><br>
+                  Next, the box layout SVG file is imported to CorelDraw and laser-cut using the FuisonPro laser-cutter in SP Fablab@T11. <br><br>
+                  <a href="images/ls3.jpg"><img src="images/ls3.jpg"height="470px"/></a>&nbsp;&nbsp;<a href="images/ls4.jpg"><img src="images/ls4.jpg"height="470px"/></a><br><br><br>
+                </p>
+                  <h2>Integration</h2>
+                  <p>
+                    Testing of the CZN-15E sound sensor module:
+                    <video width="640" height="480" controls>
+                    <source src="videos/soundtest1.mp4" type="video/mp4">
+                  </video><br>(Music: Audiotricz, Ecstatic, MERYLL - You)<br><br>
+                    The green light indicator lights up whenever sound is detected.<br><br><br>
+                    Testing of project idea with a simple red LED: <br>
+                    <video width="640" height="480" controls>
+                      <source src="videos/soundtest2.mp4" type="video/mp4"> 
+                    </video><br>(Music: D-Sturb - Fire & Blood)<br> <br>
+                    The LED lights up whenever a loud sound is detected.<br><br><br>
+                    Testing the NeoPixel strips to light up and change with music:<br>
+                    <video width="640" height="480" controls>
+                      <source src="videos/soundtest3.2.mp4" type="video/mp4"> <br>
+                    </video><br>(Music: Siks - Maybe you)<br><br>
+                    Push button is added and mode-switching is tested.<br><br><br>
+                    Final code is done and a demonstration of the fully assembled prototype: 
+                    <video width="640" height="480" controls>
+                      <source src="videos/soundtest4.mp4" type="video/mp4"> <br>
+                    </video><br>(Music: Dimitri Vegas & Like Mike - Project T (Martin Garrix Remix))<br><br>Assembly is covered in the next section below.<br><br>
+                    This is the schematic of the musical reactive light box.<br><br>
+                    <a href="images/stantia.JPG"><img src="images/stantia.JPG"height="340px"/></a><br><br>
+                    The prototype uses the Arduino Nano microcontroller to run a program instead of Arduino Uno as shown in the schematic. Both boards will work the same anyway. It works by converting averagely loud sounds such as music beats and chord changes into an analog signal. That signal will be an input for the NeoPixel strips to light up. 
+                    Depending on the sensitivity adjustments in the code, the lighting display will vary. <br><br>
+                    The 2 NeoPixel strips will light up together identically as they both receive data from the same digital pin 6.  
+                    A 1mF capacitor is connected across the NeoPixel strips +ve and -ve connections as a good practice to avoid any hazardous circuit breakdown. A 330 ohms resistor is connected to the NeoPixel strips' DATA_IN, also for safety. 
+                    2 sound sensors are used instead of one for better sound sensitivity and consistency of the lighting display. The sound sensors' OUT pins are connected to the A0 analog pin of Nano, VCC to 3.3V pin and GND to ground pin.
+                    The push button is for mode switching. The potentiometer is for brightness adjustment. A buzzer is connected to digital pin 2 to play a startup melody everytime the Arduino is powered up.<br><br>
+                    Here is the Arduino code:<br>
+                    <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FLengSiang%2FEP1000-Musical-Reactive-Light-Box%2Fblob%2Fmain%2FEP1000_Musical_Reactive_Light_Box_by_Lim_V_An.ino&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script><br>
+                  </p>
+                  <h3>Assembling the musical reactive light box:</h3><br>
+                    <a href="images/Assembly/IMG_9344.JPEG"><img src="images/Assembly/IMG_9344.JPEG"height="470px"/></a><br>
+                    <p>The NeoPixel strips are placed between the pair of long wood parts to hold them in place.<br><br></p>
+                    <a href="images/Assembly/IMG_9571.JPEG"><img src="images/Assembly/IMG_9571.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9572.JPEG"><img src="images/Assembly/IMG_9572.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9573.JPEG"><img src="images/Assembly/IMG_9573.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9575.JPEG"><img src="images/Assembly/IMG_9575.JPEG"height="470px"/></a>
+                    <a href="images/Assembly/IMG_9576.JPEG"><img src="images/Assembly/IMG_9576.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9582.JPEG"><img src="images/Assembly/IMG_9582.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9590.JPEG"><img src="images/Assembly/IMG_9590.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9592.JPEG"><img src="images/Assembly/IMG_9592.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9589.JPEG"><img src="images/Assembly/IMG_9589.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9577.JPEG"><img src="images/Assembly/IMG_9577.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9583.JPEG"><img src="images/Assembly/IMG_9583.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9346.JPEG"><img src="images/Assembly/IMG_9346.JPEG"height="470px"/></a><br>
+                   <p>The circuit is built as shown. The 3d-printed holders in grey are glued to the plywood, keeping the electronic components in place. 
+                    The 2 sound sensor modules are attached to the ceiling of the box, with the microphone sticking out through 2 holes which can be seen externally. 
+                    The long wirings are taped to the floor or inside walls of the box so that they don't get shifted and move out of place which could then make the circuit fail to function.<br><br>
+                   </p> 
+                    <a href="images/Assembly/IMG_9568.JPEG"><img src="images/Assembly/IMG_9568.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9594.JPEG"><img src="images/Assembly/IMG_9594.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9595.JPEG"><img src="images/Assembly/IMG_9595.JPEG"height="470px"/></a><br>
+                    <p>The 3d-printed light display holder is attached to the NeoPixel holder set fastened to the box floor.<br><br></p>
+                    <a href="images/Assembly/IMG_9345.JPEG"><img src="images/Assembly/IMG_9345.JPEG"height="470px"/></a><br>
+                    <p>The circuit is completed as shown.<br><br></p>
+                    <a href="images/Assembly/IMG_9596.JPEG"><img src="images/Assembly/IMG_9596.JPEG"height="470px"/></a><br>
+                    <a href="images/Assembly/IMG_9599.JPEG"><img src="images/Assembly/IMG_9599.JPEG"height="470px"/></a><br>
+                    <p>The assembly is done.<br><br></p>
         </div>
-    </div><div id="footer">
+    </div>
+    <div id="footer">
         Copyright &copy; 2022 LVA04.20.
    </div>
     </div>

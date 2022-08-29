@@ -1,16 +1,22 @@
 body {
     background-color: #625F70 ;
-    font-family: Papyrus, Helvetica, Arial, sans-serif;
-    font-size: 18px;
     margin: 0;
 }
 
 .nav .main a {
+  font-family: Quicksand;
+  font-size: 18px;
     text-decoration: none;
     color: rgb(3, 3, 108);
 }
 
-h1, h2, h3 {
+h1{
+  font-family: Papyrus, Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+h2, h3 {
+  font-family: Quicksand, Helvetica, Arial, sans-serif;
     margin: 0;
 }
 
@@ -21,6 +27,8 @@ h1, h2, h3 {
 }
 
 #header {
+  font-family: Papyrus, Helvetica, Arial, sans-serif;
+  font-size: 18px;
     background-color: #4E327D;
     color: white;
     text-align: center;
@@ -44,6 +52,8 @@ h1, h2, h3 {
 
 
 .nav  {
+  font-family: Papyrus, Helvetica, Arial, sans-serif;
+  font-size: 18px;
     float: left;
     list-style-type: none;
     padding:0;
@@ -56,6 +66,8 @@ h1, h2, h3 {
 }
 
 .nav a {
+  font-family: Papyrus, Helvetica, Arial, sans-serif;
+  font-size: 18px;
     text-decoration: none;
     font-weight: bold;
     display: block;
@@ -66,18 +78,23 @@ h1, h2, h3 {
 
 
 .nav a.active {
+  font-family: Papyrus, Helvetica, Arial, sans-serif;
+  font-size: 18px;
     background-color: hsl(36, 86%, 54%);
     color:rgb(255, 255, 255);
     
   }
 
 .nav a:hover:not(.active) {
+  font-family: Papyrus, Helvetica, Arial, sans-serif;
+  font-size: 18px;
     background-color: rgb(124, 172, 198);
     color:  #4E327D;
   }
 
-div.main {
-
+div.main { 
+    font-family: Quicksand;
+    font-size: 18px;
     background: linear-gradient(to bottom, #9778c5 0%, #b7959f 100%);
     margin-left: 0%;
     padding:24px 40px 24px 184px;
@@ -149,6 +166,9 @@ div.main {
   }
 
 #gallery {
+  
+  font-family: Papyrus, Helvetica, Arial, sans-serif;
+  font-size: 18px;
     text-align: center;
 }
 
@@ -157,10 +177,16 @@ div.main {
 }
 
 #hobbies {
+  
+  font-family: Quicksand, Helvetica, Arial, sans-serif;
+  font-size: 18px;
     padding-left: 1em;
 }
 
 #prodlist {
+  
+  font-family: Quicksand, Helvetica, Arial, sans-serif;
+  font-size: 18px;
     padding-left: 1em;
     list-style-type: none;
 }
